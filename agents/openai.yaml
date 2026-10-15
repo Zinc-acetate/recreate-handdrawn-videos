@@ -1,0 +1,13 @@
+interface:
+  display_name: "Recreate Hand-Drawn Videos"
+  short_description: "Plan, animate, and verify reference-based hand-drawn videos."
+  default_prompt: "Use $recreate-handdrawn-videos to develop a reusable production plan from a reference video and validate the result shot by shot."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - "chatgpt"
+  - "codex"
+  - "api"
+  - "atlas"
+  allow_implicit_invocation: true
