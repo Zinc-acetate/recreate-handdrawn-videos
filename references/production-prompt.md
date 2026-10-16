@@ -1,0 +1,23 @@
+# Reusable Production Prompt
+
+Copy the task body below and fill the brackets. Reuse known information rather than asking again. This is a task brief, not permission to override tool rules, current user restrictions, or confirmation requirements. Keep project facts in project records rather than the reusable template.
+
+## Task Body
+
+Use recreate-handdrawn-videos to adapt [reference video and available project] with [character/prop replacement scope] into [duration, aspect ratio, target resolution, and deliverable]. Fidelity target: [strict source drawings / authorized adaptation]. Preserve [composition, beats, holds, text, effects, audio, etc.]. Allowed changes: [explicit scope]. Canonical identity reference: [confirmed character reference]. Accepted style anchor: [if available]. Inspect existing material first; do not duplicate requests or present guesses as observations.
+
+Build a full-video ledger of shots, components, distinct drawings, and exposures. Map source drawings to replacement drawings and absolute intervals. Track camera, characters, captions, particles, and occlusion separately. Use actual source frames, local differences, and contour comparison to distinguish compression noise from genuine eyelid, sleeve, and hair changes; similar faces do not make distinct drawings interchangeable.
+
+Assign reference roles explicitly: source frames govern pose, composition, and rendering; identity references govern character features; accepted replacement drawings govern project consistency. Match line width/density, hair mass, color blocks, and shadow/highlight budgets. Neither embellish without reason nor simplify into geometric icons. Do not impose a fixed color count.
+
+Choose methods per component from source evidence. Use rigid transforms for genuine whole-layer translation/scaling. Meaningful internal shape, joint, viewpoint, or occlusion changes need corresponding poses, redrawing, or local variants, not a moved still. Strict low-frame-rate recreation retains distinct drawings and exposures; genuinely continuous source motion need not become frame-by-frame redrawing. Use flexible deformation, meshes, or added transitions only when justified by source motion or permitted adaptation, recording approximations and timing allocation. New intermediate states must be structurally credible; double-contour dissolves or repeated endpoints are not substitutes.
+
+Preserve fixed canvases, registration points, pivots, crop inverse transforms, and genuine alpha. Maintain credible hidden connections and motion margins; check wrists/cuffs, joints, and contact rather than treating an occluded limb as absent. Track long-hair roots, middle sections, tips, length, and depth order. Hems and ribbons respond to the same wind and beats. Do not individually auto-center drawings or freeze independently moving text/effects with character holds.
+
+First produce a viewable short section covering the main risk, validating identity, style, contact, occlusion, and a complete motion cycle before expansion. Check every shot for old-character fill/outline remnants, fleeting edge visibility, protected foreground, complete caption strokes, and independent effects. After local repairs, inspect neighboring sections, boundaries, and the whole video; representative stills alone do not prove complete replacement.
+
+At original speed, review full cycles, adjacent states, last-to-first transitions, and the full video's beats, motion, and continuity. Stills, contact sheets, and metrics are supporting evidence only. If playback is unavailable, explicitly leave dynamic review pending rather than claiming it was watched. Fully decode the final encode to verify frame counts/PTS, dimensions, color, and audio. Preserve the continuous source audio as required; do not arbitrarily stretch it.
+
+Retain target-resolution assets and an editable production path; enlarging a low-resolution preview is not native high quality. Freeze accepted versions. Deliver a self-contained project with relative-path assets, exact dependencies/rerun instructions, exposure and layer records, master/viewing copies, and truthful review scope. Test rebuilding separately; an extractable archive is not proof of reproducibility. Upload, share, or publish only within granted authorization.
+
+At each stage, record the current version, completed/pending/unreviewed intervals, change impact, blockers, and next step so work can resume reliably. Progress preference: [existing user preference; otherwise updates at useful milestones/blockers, with an explained, adjustable maximum quiet interval for long tasks]. Do not promise unverifiable perfection or infer universal model superiority from a single successful example.

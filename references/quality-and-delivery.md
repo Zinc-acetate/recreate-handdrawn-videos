@@ -2,6 +2,8 @@
 
 ## Establish Different Kinds of Quality Separately
 
+Play complete motion cycles and transitions at original speed, including adjacent drawings, reversals, and last-to-first boundaries. Slow motion and stills are supplementary diagnostics, not substitutes for playback.
+
 - **Semantics and design:** Compare corresponding reference timestamps side by side for identifying character features, expressions, poses, object identity, text content, and complete strokes. Use thumbnails for full-video consistency and native-size/local enlarged views for hair, cuffs, contact points, low-alpha remnants, and two- or three-pixel edge leaks. Neither view replaces the other.
 - **Motion:** Play key actions and transitions, comparing local relative movement, entrances/exits, accents, recoil, and holds. Check that intermediate phases have a genuine single silhouette. Output frame rate or overall trajectory is not sufficient evidence of motion quality. State accurately when frames were sampled but playback was not reviewed.
 - **Technical:** Decode the complete final encode and verify actual frame count, PTS, frame dimensions, color interpretation, audio mapping, and the ending. Both sides of comparison images must show the same corresponding moment; automatic synchronization by a concatenation tool can pair the wrong frames. When container duration/nominal frame rate disagrees with decoding, investigate actual timestamps and a verified mapping rather than guessing from integer frame-count multiples.

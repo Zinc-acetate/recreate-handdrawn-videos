@@ -8,6 +8,12 @@ Read the reference's held-frame structure: long pauses, a few replacement poses,
 
 To preserve holds from a verified constant-frame-rate source exactly, compute source phase from global output index `k` and rational frame rates as `k * source_fps / output_fps`, then select frames by source-state boundaries. Do not convert to an intermediate frame rate and then duplicate frames. For VFR, anomalous PTS, or a nonzero start time, use actual presentation timestamps instead of this simplified formula. Backgrounds may hold according to source presentation timing while characters requiring continuous animation are evaluated separately by phase. Check the actual last frame even for short components; approximate container duration must not cause premature truncation.
 
+## Distinct Drawings and Exposure Ledgers
+
+Within a shot, separate camera, character, text, and particle changes before deciding whether the character drawing changes. Inspect candidate frames side by side, with RGB absolute differences and two-color contour overlays to locate subtle sleeve, eyelid, or hair changes. Do not warp frames into alignment and then use the result to merge drawings. Calibrate compression noise on known holds and retain candidate and manual-merge records; global similarity can hide meaningful local changes.
+
+Record each source drawing, replacement drawing, absolute frame/PTS interval, adopted asset, and reuse relationship. A drawing may recur across several intervals; file creation order is not timeline order. Strict recreation retains drawing distinctions and every exposure boundary. For adaptation, keep a separate output ledger marking new transitions and time allocation: equal duration does not prove unchanged beats. Held character drawings must not freeze moving text or particles.
+
 ## Whole-Shot Visibility Comes Before Patch Scope
 
 1. Inspect each object's complete relevant shot and mark every visibility interval, including frame edges, occlusion gaps, motion blur, reflections, and later reappearances. Do not inspect only from the main action's onset onward.
