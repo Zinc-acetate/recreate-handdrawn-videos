@@ -27,6 +27,16 @@ Preserve abrupt acceleration, recoil, and accents; smoothing must not erase spri
 
 Do not freeze internal poses early during a transition and merely carry the whole image away. Mouth shapes should follow actual source events, not automatically cycle open/closed with the music. A local mouth repair must not change the whole face. Representative-image indices are not motion onsets. A few master drawings may correspond to multiple unequal holds; do not assume an AB loop.
 
+## Same-Pose Whole-Character Micro-Redraws
+
+First identify the changing layer: camera/whole-object trajectory, real main action, same-pose linework variation, or an independent background or prop. If the character holds while the background changes, retain that character hold rather than adding motion to make it “more alive.” Real blinks and head turns need their own key drawings, not an invented idle loop.
+
+When the source genuinely has whole-character redraw variation, derive a small set of near-identical complete drawings from one approved master (for example, two or three). Source evidence determines count, reuse order, and exposures; neither three drawings nor a fixed period is mandatory. Distribute small changes across hair strands, clothing folds, cuffs, and other parts. “Whole-character” means a coordinated complete drawing, not that every pixel must move. Stabilize eyes/face placement, head–neck–shoulder relationships, hand–prop contact, identifying clothing marks, and overall volume. Local identity-pattern locks are valid, but do not paste the entire garment back as a static master.
+
+Reject or redraw variants that become a new pose or noticeably shift the head, shoulders, hair volume, or held container. Do not force them into place with large warps. Neither a mesh moving only one hair tip nor whole-body bobbing substitutes for this redraw effect. Show one coherent drawing at each exposure; crossfaded double lines are not micro-redraws.
+
+For excessive amplitude, distinguish registration error from internal drawing differences: A/B drawings with identical scale and translation can still jump because their internal shapes differ. Reduce the deviating drawing's structural differences while retaining distributed subtle line changes. Do not weaken correct camera trajectories, independent background entrances/exits, or wipes to conceal character instability. Check a short original-speed A/B comparison before updating every reused exposure.
+
 ## Register Around Contact Points
 
 Record frame boundaries, head/shoulders, elbows/wrists/palms, contact points, and occlusion order. Face alignment does not prove that hands, cups, flowers, or two-character relationships are correct. If one translation cannot align two contact points simultaneously, relayer or redraw instead of moving a source prop to accommodate an incorrect hand.
@@ -48,3 +58,4 @@ Track major long-hair clumps through roots, middle sections, tips, and depth ord
 Inspect source frame → artwork → individual masks/alpha → intermediate layers → final encode. Fix the smallest responsible layer. Color thresholds supply candidate selections, not semantics; also constrain local ROIs, connectivity, actual semantic regions, and stage boundaries. Flower colors may select skin, pale hands may select paper edges, and caption restoration may bring back an old cuff. Do not delete all black pixels when a black block appears or redraw the whole image to repair a local problem.
 
 Remove both old character fills and outlines completely: deleting a red fill can leave black hair strands. Restrict animated layers to the real stage region. Smoke or closed curtains do not imply complete occlusion; check corners and curtain gaps, placing the new character beneath the effect first when necessary. When changing resolution, account for affine/perspective pixel-center relationships rather than merely multiplying translation values.
+
