@@ -16,6 +16,8 @@ Record each source drawing, replacement drawing, absolute frame/PTS interval, ad
 
 Map micro-redraws through the source exposure table too, recording character drawings separately from independent background/prop phases; the number of combined assets is not the number of character drawings. When replacing a drawing, find every reused exposure, including its final appearance within a transition. Treat a user's approximate timestamp as a visual locator: identify the complete problematic shot and neighboring transitions rather than examining only that exact instant.
 
+An exposure ledger may explicitly label `strict_source` or `adapted_motion`. Keep source and adopted-output tables separately. Check for gaps, undeclared overlaps, out-of-range intervals, matching overall scope, and real asset references. In strict mode, compare exposure boundaries and stable drawing correspondence without merging distinct source drawings. In adapted mode, record added transitions, redistributed durations, and shifted boundaries, then review beats. Equal duration does not prove equal switch times; existing files do not prove distinct drawing content. These are review criteria: the existing `check_coverage.py` only supplies its documented interval-coverage checks, not exposure-semantic validation.
+
 ## Whole-Shot Visibility Comes Before Patch Scope
 
 1. Inspect each object's complete relevant shot and mark every visibility interval, including frame edges, occlusion gaps, motion blur, reflections, and later reappearances. Do not inspect only from the main action's onset onward.
@@ -49,4 +51,5 @@ Example (numbers illustrate the format, not recommended parameters):
 Run: `python scripts/check_coverage.py manifest.json`. Exit codes: 0 means the declared intervals pass; 1 indicates gaps or undeclared overlaps; 2 indicates malformed input or a read error. Guards are clipped to video boundaries, but not automatically to shot boundaries, so that adjacent-shot handoffs needing review remain detectable. If an adjacent shot must not be processed, adjust actual boundaries or use separate manifests with explicit scopes rather than blindly extending a visible object.
 
 The script proves only containment relationships among supplied intervals. Missing visibility annotations, incorrect occlusion, stray hair, wrong designs, ineffective animation, or audiovisual desynchronization can remain even when it passes. For multitrack composites, supply final shot intervals, not character or caption layer intervals; their normal concurrency would otherwise be reported as overlap.
+
 

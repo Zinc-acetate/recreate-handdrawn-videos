@@ -13,6 +13,8 @@ Use the request and reference video to establish whether the task is a faithful 
 
 Inspect the existing project and available tools first. Follow a production approach specified by the user; otherwise choose based on the visuals and motion. Do not turn a hand-drawn look into vector icons, a static slideshow, or uniformly smooth animation merely because those are easier to batch-generate.
 
+Before drawing production shots, establish and review a character baseline in the target PV style: front, side, and back views plus face/eye close-ups. Reuse an existing complete set only after verifying that it matches. Reference the accepted baseline throughout production, while still checking each shot; a reference sheet cannot guarantee consistency. See [Visual and Motion Workflows](references/visual-and-motion.md).
+
 ## Workflow and Reference Routing
 
 1. **Break down shots and locate risks.** Record shot intervals, beat and motion landmarks, original visibility intervals, and assets. Map source drawings to replacement drawings and exposure intervals. Separate camera, character, text, and particle changes; preserve reference holds and absolute timing. For timing recreation, fleeting edge visibility, or local replacement coverage, read [Timing and Coverage](references/timing-and-coverage.md).
@@ -39,4 +41,5 @@ For full-video production or work resumed across sessions, read [Production Work
 For the rationale behind particular methods, consult [Case Lessons](references/case-lessons.md) as needed. These are sources of reusable lessons, not templates for new projects.
 
 For external method provenance and applicability limits, consult [Public Methods and Boundaries](references/public-methods.md).
+
 
