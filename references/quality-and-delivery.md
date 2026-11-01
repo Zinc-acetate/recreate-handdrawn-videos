@@ -21,6 +21,8 @@ When background, text, layout, and music must remain unchanged, prefer the origi
 
 Preserve the full shapes and correct alpha of semitransparent text/bubbles. Hard thresholds must not truncate fading strokes. Crop moving picture frames/black borders using stable geometric boundaries, not whether compressed pixels are pure black. For screen replacement, mask the real screen outline and rounded corners. Distinguish scan light, borders, foreground occlusion, and exit blur rather than treating everything as a rectangular overlay.
 
+If color extraction repeatedly restores old character pixels, loses text, or changes glyphs within one hold, switch to verified independent transparent text assets composited with source exposures and depth order. Preserve character-by-character reveals, fades, and blank intervals. Connected-component area filtering must not discard dots, diacritics, accent marks, or other small valid strokes; compare the content character by character with the source. Version and checksum manually repaired assets so automatic rebuilds cannot silently overwrite the repair.
+
 If source material is too short, first locate whether the missing section affects visible action. Consider a very brief hold only in an explicitly acceptable, verified occluded or strongly blurred tail. Do not automatically freeze, loop, or retime clear action to fill the duration. Record such a compromise as a local choice.
 
 ## When Applicable: Consistent Encoding and Audio Preservation
@@ -32,6 +34,8 @@ If source material is too short, first locate whether the missing section affect
 - If the task permits music or edit changes, use sample-accurate joins, listening, and synchronization review instead of demanding original-track byte identity. Frame/sample quantization can create tiny end differences; explain them using time bases before stretching audio merely to match container numbers.
 - If native-resolution rendering resources are limited, use streaming decode, bounded caches, small keyframe batches, and controlled concurrency. Choose parameters for the current machine rather than hard-coding a concurrency count.
 
+Estimate and observe aggregate peak resources while renderers, caches, concurrent jobs, and encoders coexist, not merely each process in isolation. Separate bounded rendering batches from encoding when necessary. Give chunks explicit global frame intervals, unique job ownership, and input/configuration versions; reuse only chunks with verified completion, decoding, and frame counts. File existence does not prove completion. Retries must identify and handle partial outputs without deleting caches outside the current job.
+
 ## Freeze Results and Deliver
 
 For approved components, record input/asset checksums, the exact scripts and dependency versions used, anchors, masks, trajectories, frame mappings, output checksums, and review scope. If shared scripts change later, do not claim their current versions can reproduce old components pixel for pixel. Small repairs may reuse an approved encoded plate for local patches, but check re-encoding losses. Do not rerender the whole video with changed global scripts without a reason.
@@ -40,3 +44,4 @@ Save final masters, viewing copies, layered assets/projects, source mappings, an
 
 A download link is a delivery copy, not long-term archival storage. Verify results and authorization separately for generation, attachment sending, uploading, and public publishing. A failed upload does not automatically authorize another service. A production summary must not reopen completed projects or imply authorization to clean up historical working files.
 
+When the user authorizes backup followed by cleanup, inventory required files and archive coverage, distinguishing unique assets, rebuildable caches, and existing remote copies. After upload, verify actual remote retrievability, size, and content checksums, recording the archive location and recovery scope; a successful request or existing link alone does not establish a valid backup. Clean up only local files covered by verified archives and retain unbacked unique assets. Investigate discrepancies between records and actual environment/file availability before proceeding; do not guess why files are missing or expand deletion scope.

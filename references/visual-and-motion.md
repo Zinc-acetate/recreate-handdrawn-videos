@@ -6,9 +6,13 @@ Source frames constrain pose and visual style; character references constrain id
 
 When correcting a model sheet's skirt color, accessory placement, or similar feature, propagate the correction through all derived poses. Keep a few accurate identifying features for simple supporting characters; do not automatically upgrade them to detailed lead-character portraits. Treat materials, holes, and occlusion separately: transparent openings must not be painted black, and removing the outer background does not prove internal alpha is correct. Check transparent regions against different backgrounds while preserving legitimate hair or clothing crossing in front of them.
 
+Judge transparent edges from correct alpha composites over light, dark, and contrasting solid backgrounds. Distinguish a viewer exposing hidden RGB in transparent pixels from real premultiplication errors or matte contamination; a fringe in a transparent-image preview alone does not justify thresholding alpha, removing valid soft edges, or regenerating the asset.
+
 Match the shot's hair volume, clump size, line density, and shadow/highlight count and area. Neither embellish by default nor simplify into geometric icons. Derive color and shading budgets from the reference, not a universal fixed color count.
 
 Validate new poses at final display size for line width, antialiasing, alpha edges, and recognizable details. Recompose high-resolution artwork at the target size rather than enlarging a low-resolution preview. Recheck thin lines lost during downsampling and semitransparent white fringes.
+
+When strongly reducing raster line art, a single affine bicubic resampling can fragment thin strokes even when the source and alpha are clean. Inspect the actual target-size composite and compare antialiased downsampling of correctly premultiplied RGBA (for example, Lanczos or area prefiltering) before placement; these are diagnostic options, not a fixed pipeline. Preserve registration rather than hiding the symptom with global blur or alpha thresholds. Recheck both small and large instances and discrete-state boundaries.
 
 ## Choose the Workflow; Do Not Let the Tool Choose the Look
 
@@ -51,6 +55,8 @@ Before repairing, distinguish:
 
 Record frame boundaries, head/shoulders, elbows/wrists/palms, contact points, and occlusion order. Face alignment does not prove that hands, cups, flowers, or two-character relationships are correct. If one translation cannot align two contact points simultaneously, relayer or redraw instead of moving a source prop to accommodate an incorrect hand.
 
+Establish the prop's object category, supporting surface, thickness, and character contact before designing masks and depth order. Do not infer from color silhouettes alone that a support surface is a foreground panel occluding the character. If the underlying object interpretation is wrong, rebuild the contact structure instead of cropping the character to accommodate incorrect layers.
+
 - A side-lying pose requires contact with the pillow, appropriate head/neck tilt, bedding occlusion, and the bed's motion. It is not a frontal face moved onto a bed.
 - For an embrace, check hip height, torso tilt, leg overlap, and the two characters' depth order. For standing poses, check heel support and foot placement, not just the face.
 - When retaining source prop geometry and the design is compatible, preserve accurate finger/contact geometry and connect the new cuff to the real wrist point. Otherwise redraw, while still locking the prop trajectory and contact relationship.
@@ -68,5 +74,3 @@ Track major long-hair clumps through roots, middle sections, tips, and depth ord
 Inspect source frame → artwork → individual masks/alpha → intermediate layers → final encode. Fix the smallest responsible layer. Color thresholds supply candidate selections, not semantics; also constrain local ROIs, connectivity, actual semantic regions, and stage boundaries. Flower colors may select skin, pale hands may select paper edges, and caption restoration may bring back an old cuff. Do not delete all black pixels when a black block appears or redraw the whole image to repair a local problem.
 
 Remove both old character fills and outlines completely: deleting a red fill can leave black hair strands. Restrict animated layers to the real stage region. Smoke or closed curtains do not imply complete occlusion; check corners and curtain gaps, placing the new character beneath the effect first when necessary. When changing resolution, account for affine/perspective pixel-center relationships rather than merely multiplying translation values.
-
-
