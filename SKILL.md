@@ -43,3 +43,5 @@ For the rationale behind particular methods, consult [Case Lessons](references/c
 For external method provenance and applicability limits, consult [Public Methods and Boundaries](references/public-methods.md).
 
 
+
+Before revisions, record the approved version and the explicitly allowed changes. Resolve ambiguous hands and props using adjacent source frames before counting fingers or checking contact. Track extra clean-image exports and project recovery status separately; see quality and delivery.
