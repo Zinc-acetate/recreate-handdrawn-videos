@@ -30,3 +30,12 @@ Use these cases to understand why a method exists, not to copy project parameter
 - **Background changes are mistaken for character changes.** Separate background/prop and character exposures. Do not invent character micro-states from the count of combined assets; preserve real key drawings for main action, blinks, and head turns.
 - **An approved local test changes character when expanded or rendered at higher resolution.** Integrate through all reused exposures and check adjacent drawings, loop boundaries, and transitions. Compose high-resolution masters directly on the final canvas; higher resolution is not permission to increase approved motion amplitude.
 
+
+## Recent Reference-Recreation Revision Checks
+
+These checks summarize review feedback, not a fresh verification of the affected projects. Project names and private conversation details are intentionally omitted.
+
+- **Props mistaken for fingers.** A stylized cluster may be objects held between fingers rather than extra digits. Enlarge the source and inspect adjacent frames; separately record visible fingers, prop count, gaps, thumb direction, contact, and occlusion. Do not assign an uncertain example to a project without verifying its source.
+- **Repeated hand corrections.** Missing fingers, finger length, and an overly realistic thumb are distinct checks. Preserve plausible contact while matching the source's simplified drawing style rather than substituting a realistic hand.
+- **Unwanted jitter confused with intentional action.** Diagnose horizontal translation, scale, rotation, nodding, and hair-layer attachment separately. Remove unsupported motion components while retaining source-grounded gestures; a detached hair tuft is not solved by disabling all animation.
+- **Accepted subtle motion changes during enhancement.** Freeze the accepted version and list permitted edits before adding details or increasing resolution. Preserve approved amplitude, phase, and registration, and compare unchanged regions as well as the repaired shot.
